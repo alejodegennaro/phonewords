@@ -1,12 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Phonewords
 
-# number-2-word
-
-> Keyboard that returns T9 like text response for any given number(s)
+React app with a Node backend that converts a given numeric string into a list of corresponding words in the style of T9 or Phonewords.
 
 ## Getting Started
 
-In the project directory, you can run:
+On each project directory, you can run:
 
 ### `npm install`
 
@@ -15,16 +13,16 @@ Install all the project dependencies.
 ### `npm start`
 
 Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Overall Limitations and other considerations
 
-### `npm test`
+### Backend
+**Please see the project README for additional info regarding endpoints**
 
-Launches the test runner in the interactive watch mode.<br />
+1. The endpoint will filter and allow only numeric values between 2-9. Use cases for 0, 1, #, *, empty spaces and any other string are not being handled.
+2. The current unit tests are unified on the controller file for simplicity, instead of separated on the service implementation.
 
-## Limitations and other considerations
+### Frontend
 
 1. No styling strategy was applied. All was done using Material UI components and inline styles for simplicity.
 2. Since the backend won't handle edge cases, numbers 1 and 0 are not currently selectable.
